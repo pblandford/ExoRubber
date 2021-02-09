@@ -875,7 +875,6 @@ public final class DefaultAudioSink implements AudioSink {
           audioProcessor.queueInput(input);
         }
         ByteBuffer output = audioProcessor.getOutput();
-        Log.e("RBS", "Output " + output.remaining());
         outputBuffers[index] = output;
         if (output.hasRemaining()) {
           // Handle the output as input to the next audio processor or the AudioTrack.

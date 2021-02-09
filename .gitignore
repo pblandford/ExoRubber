@@ -43,6 +43,9 @@ bazel-genfiles
 bazel-out
 bazel-testlogs
 
+# Native
+.cxx
+
 # Other
 .DS_Store
 cmake-build-debug

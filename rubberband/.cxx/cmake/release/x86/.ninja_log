@@ -1,9 +1,0 @@
-# ninja log v5
-1	40	1612719812	CMakeFiles/rubberband-jni.dir/src/system/Thread.cpp.o	559aff2437bc9d8d
-0	934	1612719813	CMakeFiles/rubberband-jni.dir/src/base/Profiler.cpp.o	769443b82dce61ca
-0	1181	1612719813	CMakeFiles/rubberband-jni.dir/src/jni/RubberBandStretcherJNI.cpp.o	b97ea0a8a99ca962
-13	1342	1612719813	CMakeFiles/rubberband-jni.dir/src/system/sysutils.cpp.o	649d90124d78fe98
-5	1430	1612719814	CMakeFiles/rubberband-jni.dir/src/system/Allocators.cpp.o	518672fa5a518e98
-40	2181	1612719814	CMakeFiles/rubberband-jni.dir/src/StretcherChannelData.cpp.o	146df0f50311eae8
-0	5	0	clean	e9befe8792c544ce
-0	4	0	clean	e9befe8792c544ce

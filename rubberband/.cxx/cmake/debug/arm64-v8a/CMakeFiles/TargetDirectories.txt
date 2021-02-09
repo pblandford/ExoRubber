@@ -1,3 +1,0 @@
-/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/.cxx/cmake/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir
-/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/.cxx/cmake/debug/arm64-v8a/CMakeFiles/edit_cache.dir
-/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/.cxx/cmake/debug/arm64-v8a/CMakeFiles/rubberband-jni.dir
