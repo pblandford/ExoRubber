@@ -39,7 +39,6 @@ class RubberBandAudioProcessor : AudioProcessor {
     }
 
     override fun isActive(): Boolean {
-        return true
         return rbParameters.speed != 1.0 || rbParameters.pitch != 1.0
     }
 
@@ -125,7 +124,7 @@ class RubberBandAudioProcessor : AudioProcessor {
     }
 
     fun getMediaDuration(playoutDuration: Long): Long {
-        return ((rubberBandStretcher?.timeRatio ?: 1.0) * playoutDuration).toLong()
+        return ((1.0/(rubberBandStretcher?.timeRatio ?: 1.0)) * playoutDuration).toLong()
     }
 
     private fun ByteBuffer.toFloats(): Array<out FloatArray> {

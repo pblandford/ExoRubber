@@ -5,29 +5,74 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context=".RubberBandDemoActivity">
+
   <com.google.android.exoplayer2.ui.StyledPlayerView
-    android:id="@+id/playerView"
+    android:id="@+id/playerView1"
     android:layout_width="300dp"
-    android:layout_height="300dp"
-    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_height="150dp"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
   <SeekBar
-    android:id="@+id/speed_seek_bar"
+    android:id="@+id/speed_seek_bar1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="50dp"
+    android:layout_marginTop="20dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/playerView" />
+    app:layout_constraintTop_toBottomOf="@+id/playerView1" />
   <SeekBar
-    android:id="@+id/pitch_seek_bar"
+    android:id="@+id/pitch_seek_bar1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/speed_seek_bar" />
+    app:layout_constraintTop_toBottomOf="@+id/speed_seek_bar1" />
+
+  <com.google.android.exoplayer2.ui.StyledPlayerView
+    android:id="@+id/playerView2"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/pitch_seek_bar1" />
+  <SeekBar
+    android:id="@+id/speed_seek_bar2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/playerView2" />
+  <SeekBar
+    android:id="@+id/pitch_seek_bar2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/speed_seek_bar2" />
+
+  <com.google.android.exoplayer2.ui.StyledPlayerView
+    android:id="@+id/playerView3"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/pitch_seek_bar2" />
+  <SeekBar
+    android:id="@+id/speed_seek_bar3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/playerView3" />
+  <SeekBar
+    android:id="@+id/pitch_seek_bar3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/speed_seek_bar3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
