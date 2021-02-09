@@ -1,0 +1,10 @@
+{
+  "ndkVersionFromDsl": "22.0.7026061",
+  "ndkDirProperty": "/home/philb/Library/Sdk/ndk/22.0.7026061/",
+  "sdkFolder": "/home/philb/Library/Sdk",
+  "sideBySideNdkFolderNames": [
+    "22.0.7026061",
+    "21.1.6352462",
+    "21.3.6528147"
+  ]
+}

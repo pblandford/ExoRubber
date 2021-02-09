@@ -1,0 +1,7 @@
+Executable : /home/philb/Library/Sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/.cxx/cmake/debug/x86
+rubberband-jni
+jvmArgs : 
+

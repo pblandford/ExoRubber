@@ -134,20 +134,20 @@ public final class DefaultAudioSink implements AudioSink {
 
   /**
    * The default audio processor chain, which applies a (possibly empty) chain of user-defined audio
-   * processors followed by {@link SilenceSkippingAudioProcessor} and {@link SonicAudioProcessor}.
+   * processors followed by {@link SilenceSkippingAudioProcessor} and {@link RubberBandAudioProcessor}.
    */
   public static class DefaultAudioProcessorChain implements AudioProcessorChain {
 
     private final AudioProcessor[] audioProcessors;
     private final SilenceSkippingAudioProcessor silenceSkippingAudioProcessor;
-    private final SonicAudioProcessor sonicAudioProcessor;
+    private final RubberBandAudioProcessor rubberBandAudioProcessor;
 
     /**
      * Creates a new default chain of audio processors, with the user-defined {@code
      * audioProcessors} applied before silence skipping and speed adjustment processors.
      */
     public DefaultAudioProcessorChain(AudioProcessor... audioProcessors) {
-      this(audioProcessors, new SilenceSkippingAudioProcessor(), new SonicAudioProcessor());
+      this(audioProcessors, new SilenceSkippingAudioProcessor(), new RubberBandAudioProcessor());
     }
 
     /**
@@ -157,7 +157,7 @@ public final class DefaultAudioSink implements AudioSink {
     public DefaultAudioProcessorChain(
         AudioProcessor[] audioProcessors,
         SilenceSkippingAudioProcessor silenceSkippingAudioProcessor,
-        SonicAudioProcessor sonicAudioProcessor) {
+        RubberBandAudioProcessor rubberBandAudioProcessor) {
       // The passed-in type may be more specialized than AudioProcessor[], so allocate a new array
       // rather than using Arrays.copyOf.
       this.audioProcessors = new AudioProcessor[audioProcessors.length + 2];
@@ -168,9 +168,9 @@ public final class DefaultAudioSink implements AudioSink {
           /* destPos= */ 0,
           /* length= */ audioProcessors.length);
       this.silenceSkippingAudioProcessor = silenceSkippingAudioProcessor;
-      this.sonicAudioProcessor = sonicAudioProcessor;
+      this.rubberBandAudioProcessor = rubberBandAudioProcessor;
       this.audioProcessors[audioProcessors.length] = silenceSkippingAudioProcessor;
-      this.audioProcessors[audioProcessors.length + 1] = sonicAudioProcessor;
+      this.audioProcessors[audioProcessors.length + 1] = rubberBandAudioProcessor;
     }
 
     @Override
@@ -180,8 +180,8 @@ public final class DefaultAudioSink implements AudioSink {
 
     @Override
     public PlaybackParameters applyPlaybackParameters(PlaybackParameters playbackParameters) {
-      sonicAudioProcessor.setSpeed(playbackParameters.speed);
-      sonicAudioProcessor.setPitch(playbackParameters.pitch);
+      rubberBandAudioProcessor.setSpeed(playbackParameters.speed);
+      rubberBandAudioProcessor.setPitch(playbackParameters.pitch);
       return playbackParameters;
     }
 
@@ -193,7 +193,7 @@ public final class DefaultAudioSink implements AudioSink {
 
     @Override
     public long getMediaDuration(long playoutDuration) {
-      return sonicAudioProcessor.getMediaDuration(playoutDuration);
+      return rubberBandAudioProcessor.getMediaDuration(playoutDuration);
     }
 
     @Override
@@ -533,6 +533,7 @@ public final class DefaultAudioSink implements AudioSink {
       AudioProcessor.AudioFormat outputFormat =
           new AudioProcessor.AudioFormat(
               inputFormat.sampleRate, inputFormat.channelCount, inputFormat.pcmEncoding);
+      Log.e("RBS", "Input format " + inputFormat.sampleRate + " " + inputFormat.channelCount + " " + inputFormat.pcmEncoding);
       for (AudioProcessor audioProcessor : availableAudioProcessors) {
         try {
           AudioProcessor.AudioFormat nextFormat = audioProcessor.configure(outputFormat);
@@ -865,6 +866,7 @@ public final class DefaultAudioSink implements AudioSink {
     while (index >= 0) {
       ByteBuffer input = index > 0 ? outputBuffers[index - 1]
           : (inputBuffer != null ? inputBuffer : AudioProcessor.EMPTY_BUFFER);
+
       if (index == count) {
         writeBuffer(input, avSyncPresentationTimeUs);
       } else {
@@ -873,6 +875,7 @@ public final class DefaultAudioSink implements AudioSink {
           audioProcessor.queueInput(input);
         }
         ByteBuffer output = audioProcessor.getOutput();
+        Log.e("RBS", "Output " + output.remaining());
         outputBuffers[index] = output;
         if (output.hasRemaining()) {
           // Handle the output as input to the next audio processor or the AudioTrack.
@@ -890,6 +893,7 @@ public final class DefaultAudioSink implements AudioSink {
       index--;
     }
   }
+
 
   @SuppressWarnings("ReferenceEquality")
   private void writeBuffer(ByteBuffer buffer, long avSyncPresentationTimeUs) throws WriteException {

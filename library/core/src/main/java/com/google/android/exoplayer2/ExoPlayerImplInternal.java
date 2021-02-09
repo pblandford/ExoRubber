@@ -889,6 +889,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
         // TODO: Each renderer should return the maximum delay before which it wishes to be called
         // again. The minimum of these values should then be used as the delay before the next
         // invocation of this method.
+
         renderer.render(rendererPositionUs, rendererPositionElapsedRealtimeUs);
         renderersEnded = renderersEnded && renderer.isEnded();
         // Determine whether the renderer allows playback to continue. Playback can continue if the

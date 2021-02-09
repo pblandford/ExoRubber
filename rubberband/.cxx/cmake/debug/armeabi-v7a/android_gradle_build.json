@@ -1,0 +1,161 @@
+{
+  "stringTable": {
+    "0": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/.cxx/cmake/debug/armeabi-v7a",
+    "1": "--target=armv7-none-linux-androideabi21 --gcc-toolchain=/home/philb/Library/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/philb/Library/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Drubberband_jni_EXPORTS -I/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/. -I/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/./src -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC -g -mfloat-abi=softfp -DWANT_TIMING -DFFT_MEASUREMENT -Wall -DUSE_SPEEX -DUSE_KISSFFT -DPROCESS_SAMPLE_TYPE=float -DLACK_POSIX_MEMALIGN -DUSE_OWN_ALIGNED_MALLOC -DLACK_SINCOS -DNO_EXCEPTIONS -DNO_THREADING -DNO_THREAD_CHECKS"
+  },
+  "buildFiles": [
+    "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/CMakeLists.txt",
+    "/home/philb/Library/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/home/philb/Library/Sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/home/philb/Library/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/.cxx/cmake/debug/armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "/home/philb/Library/Sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/.cxx/cmake/debug/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "rubberband-jni-Debug-armeabi-v7a": {
+      "buildCommand": "/home/philb/Library/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/.cxx/cmake/debug/armeabi-v7a\" rubberband-jni",
+      "buildType": "debug",
+      "toolchain": "2086490496",
+      "abi": "armeabi-v7a",
+      "artifactName": "rubberband-jni",
+      "files": [
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/speex/resample.c",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/kissfft/kiss_fft.c",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/kissfft/kiss_fftr.c",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/jni/RubberBandStretcherJNI.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/base/Profiler.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/system/Thread.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/system/Allocators.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/system/sysutils.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/system/VectorOpsComplex.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/StretcherChannelData.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/dsp/AudioCurveCalculator.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/dsp/FFT.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/dsp/Resampler.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/audiocurves/SilentAudioCurve.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/audiocurves/CompoundAudioCurve.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/audiocurves/HighFrequencyAudioCurve.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/audiocurves/SpectralDifferenceAudioCurve.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/audiocurves/ConstantAudioCurve.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/audiocurves/PercussiveAudioCurve.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/StretcherImpl.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/StretcherProcess.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/StretchCalculator.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/RubberBandStretcher.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/src/main/cpp/rubberband/src/rubberband-c.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/home/philb/Scratchpad/ExoPlayerWithRubberband/rubberband/buildout/intermediates/cmake/debug/obj/armeabi-v7a/librubberband-jni.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "2086490496": {
+      "cCompilerExecutable": "/home/philb/Library/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "cppCompilerExecutable": "/home/philb/Library/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}
